@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import css from './Modal.modul.css';
+import css from './Modal.module.css';
+
+
 
 export class Modal extends Component {
   render() {
@@ -9,12 +11,14 @@ export class Modal extends Component {
     return (
       <div onClick={handleCloseModal} className={css.Overlay}>
         <div className={css.Modal}>
-          <img src={imageUrl} alt={altText} />
+          <img src={imageUrl} alt={altText}/>
         </div>
       </div>
     );
   }
 }
+
+
 
 Modal.propTypes = {
   imageUrl: PropTypes.string.isRequired,
